@@ -105,8 +105,9 @@ add_action( 'widgets_init', 'yoga_fly_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function yoga_fly_theme_scripts() {
+	wp_enqueue_style( 'yoga-fly-open-sans', "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" );
 	wp_enqueue_style( 'yoga-fly-theme-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'yoga-fly-open-sans', "//fonts.googleapis.com/css?family=Open+Sans" );
+	wp_enqueue_style( 'yoga-fly-theme-navigation', get_template_directory_uri() . '/css/theme.css');
 
 	wp_enqueue_script( 'yoga-fly-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
