@@ -43,19 +43,26 @@ header .middle {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
-    color: #000000;
-    padding: 7px 28px;
-    font-size: 14px;
+}
 
+.main-navigation ul li {
+    padding: 7px 28px;
+}
+
+.main-navigation ul li a {
+    color: #000000;
+    font-size: 14px;
 }
 
 .main-navigation ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    background: #4a4967;
+    border-radius: 4px;
     float: left;
     position: absolute;
-    top: 1.5em;
+    top: 2.2em;
     left: -999em;
     z-index: 99999;
+    /*margin-top: 20px;*/
 }
 
 .main-navigation ul ul ul {
@@ -64,17 +71,38 @@ header .middle {
 }
 
 .main-navigation ul ul a {
-    width: 200px;
+    width: 180px;
+    color: #fff;
+    font-weight: 300;
 }
 
 .main-navigation ul ul li {
-
+    border-bottom: 1px solid #78778d;
+    padding: 7px 20px;
 }
 
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
+.main-navigation ul ul li:last-of-type {
+    border: 0px !important;
+}
+
+.main-navigation ul ul li:first-of-type {
+    border-top-right-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+}
+
+.main-navigation ul ul li:last-of-type {
+    border-bottom-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.main-navigation ul li:hover,
+.main-navigation ul li.focus {
     background: #fff;
     border-radius: 17px;
+}
+.main-navigation ul li:hover > a,
+.main-navigation ul li.focus > a {
+ 
 }
 
 .main-navigation ul ul :hover > a,
@@ -83,11 +111,25 @@ header .middle {
 
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a.focus {
+
+}
+
+.main-navigation ul ul li:hover, 
+.main-navigation ul ul li.focus {
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #78778d;
+}
+
+.main-navigation ul ul li:hover a,
+.main-navigation ul ul li.focus a {
+    color: #4c4b68;
+
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-    left: auto;
+    left: 0;
 }
 
 .main-navigation ul ul li:hover > ul,
